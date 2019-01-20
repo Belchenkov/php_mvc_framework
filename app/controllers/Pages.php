@@ -4,6 +4,16 @@ class Pages
 {
     public function __construct()
     {
-        echo 'Pages Loaded';
+
+    }
+
+    public function index()
+    {
+        echo 'Pages/index';
+    }
+    
+    public function about()
+    {
+        echo 'About';
     }
 }
