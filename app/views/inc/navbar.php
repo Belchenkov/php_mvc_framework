@@ -30,6 +30,14 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
+            <?php if (isset($_SESSION['user_id'])) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= URLROOT; ?>/users/logout">
+                        <img src="https://img.icons8.com/dusk/16/000000/shutdown.png">
+                        Logout
+                    </a>
+                </li>
+            <?php else : ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= URLROOT; ?>/users/register">
                     <img src="https://img.icons8.com/dusk/16/000000/edit-user-male.png">
@@ -42,6 +50,7 @@
                     Login
                 </a>
             </li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
