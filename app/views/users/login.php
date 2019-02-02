@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body bg-secondary text-dark mt-5">
+                <?php flash('register_success');?>
                 <h2 class="text-center">
                     <img src="https://img.icons8.com/dusk/30/000000/password.png">
                     Login
