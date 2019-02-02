@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 15px;
+}
+
+.navbar {
+    padding: 0 2rem;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.navbar a {
+    text-shadow: 0 0 3px #000000;
+}

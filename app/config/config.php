@@ -10,4 +10,6 @@
     // URL Root
     define('URLROOT', 'http://127.0.0.1');
     // Site Name
-    define('SITENAME', 'phpMVC');
+    define('SITENAME', 'PHPMVC');
+    // App Version
+    define('APPVERSION', '1.0.0');
