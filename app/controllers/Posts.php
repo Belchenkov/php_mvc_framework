@@ -135,4 +135,25 @@ class Posts extends Controller
             $this->view('posts/edit', $data);
         }
     }
+
+    public function delete($id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($this->postModel->deletePost($id)) {
+                // Get existing post from model
+                $post = $this->postModel->getPostById($id);
+                // Check for owner
+                if ($post->user_id != $_SESSION['user_id']) {
+                    redirect('posts');
+                }
+
+                flash('post_message', 'Post Removed!');
+                redirect('posts');
+            } else {
+                die('Something went wrong!');
+            }
+        } else {
+            redirect('posts');
+        }
+    }
 }
