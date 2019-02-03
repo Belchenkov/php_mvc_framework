@@ -8,6 +8,10 @@ class Pages extends Controller
 
     public function index()
     {
+        if (isLoggedIn()) {
+            redirect('posts');
+        }
+
         $data = [
             'title' => 'SharePosts',
             'desc' => 'Simple social network built on the PHP MVC Framework'
