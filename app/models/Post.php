@@ -37,6 +37,20 @@ class Post
         return $this->db->execute();
     }
 
+    public function updatePost($data)
+    {
+        $this->db->query('UPDATE `posts` SET `title` = :title, `body` = :body, `user_id` = :user_id WHERE id = :id');
+
+        // Bind values
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':user_id', $data['user_id']);
+        $this->db->bind(':title', $data['title']);
+        $this->db->bind(':body', $data['body']);
+
+        // Execute
+        return $this->db->execute();
+    }
+
     public function getPostById($id)
     {
         $this->db->query('SELECT * FROM `posts` WHERE `id` = :id');
