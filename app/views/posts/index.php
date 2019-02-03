@@ -7,7 +7,7 @@
             </h1>
         </div>
         <div class="col-md-6 text-right pt-3">
-            <a href="<?=URLROOT;?>;posts/add" class="btn btn-info btn-sm pull-right">
+            <a href="<?=URLROOT;?>/posts/add" class="btn btn-info btn-sm pull-right">
                 <img src="https://img.icons8.com/plasticine/40/000000/plus.png"> Add Post
             </a>
         </div>
